@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>404 Club | PT Nusa Belanja</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#2563EB;--navy:#0F172A;--bg:#F8FAFC;--line:#E2E8F0;--mut:#64748B;--soft:#F1F5F9;--ok:#16A34A;--warn:#D97706;--bad:#DC2626;
+--bs-primary:#2563EB;--bs-primary-rgb:37,99,235;--bs-body-font-family:Inter,"Segoe UI",system-ui,sans-serif;--bs-body-font-size:.8125rem;--bs-border-color:#E2E8F0}
+body{font-family:Inter,"Segoe UI",system-ui,sans-serif;font-size:13px;background:var(--bg);color:var(--navy);-webkit-font-smoothing:antialiased}
+.text-muted{color:var(--mut)!important}
+.side{width:248px;background:var(--navy);color:#fff;min-height:100vh;position:fixed;top:0;left:0;z-index:20;padding:20px 12px;overflow:auto;border-right:1px solid #1E293B}
+.side .nv{display:flex;align-items:center;gap:10px;width:100%;text-align:left;color:#94A3B8;background:none;border:0;padding:8px 12px;border-radius:8px;margin-bottom:2px;font-size:13px;font-weight:500;transition:background .15s,color .15s}
+.side .nv:hover{background:#1E293B;color:#E2E8F0}
+.side .nv.on{background:rgba(37,99,235,.2);color:#fff;box-shadow:inset 3px 0 0 var(--blue)}
+.side .nv span.ic{width:20px;text-align:center;filter:grayscale(1) brightness(1.6);font-size:14px}
+.side .nv.on span.ic{filter:none}
+.navlbl{font-size:11px;color:#64748B;font-weight:500;padding:4px 12px 8px}
+.side hr{border-color:#1E293B!important;opacity:1;margin:14px 0}
+.logo{display:flex;align-items:center;gap:10px;margin:0 4px 22px}
+.logo b{background:var(--blue);color:#fff;border-radius:8px;width:34px;height:34px;display:grid;place-items:center;font-weight:600;font-size:13px}
+.logo .fw-bold{font-weight:600;font-size:14px;line-height:1.2}.logo small{font-size:11px}
+.main{margin-left:248px;min-height:100vh}
+.top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;min-height:56px;padding:8px 28px!important}
+body.after .main .top{box-shadow:inset 0 -2px 0 var(--ok)}body.before .main .top{box-shadow:inset 0 -2px 0 var(--warn)}
+.av{width:32px;height:32px;border-radius:50%;background:#DBEAFE;color:#1E40AF;display:grid;place-items:center;font-weight:600;font-size:12px}
+.top .btn-light{background:var(--soft);border:1px solid var(--line)}
+.top .text-end b{font-size:13px;font-weight:600}.top .text-end small{font-size:11px}
+.main>.p-3{padding:28px 32px!important}
+h4.fw-bold{font-size:26px;font-weight:600;letter-spacing:-.01em;margin-bottom:4px!important}
+h4.fw-bold+p{font-size:13px;color:var(--mut);margin-bottom:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.card b{font-weight:600;font-size:14px}.card small,.card .small{font-size:12px}
+.card .stat{font-size:26px;font-weight:600;letter-spacing:-.01em;margin-top:2px}
+.row.g-3{--bs-gutter-x:20px;--bs-gutter-y:20px}
+.table{margin:0;--bs-table-bg:transparent;font-size:13px}
+.table thead th{background:var(--soft);color:var(--mut);font-size:12px;font-weight:500;border-bottom:1px solid var(--line);padding:10px 12px;white-space:nowrap}
+.table td{padding:12px;border-color:var(--line)}.table tbody tr:hover{background:#F8FAFC}
+.table-responsive{border-radius:8px}
+.badge{font-weight:500;font-size:11px;padding:4px 8px;border-radius:6px;letter-spacing:0}
+.badge.bg-success{background:#DCFCE7!important;color:#166534!important}.badge.bg-danger{background:#FEE2E2!important;color:#991B1B!important}
+.badge.bg-warning{background:#FEF3C7!important;color:#92400E!important}.badge.bg-primary{background:#DBEAFE!important;color:#1E40AF!important}
+.badge.bg-secondary{background:var(--soft)!important;color:#475569!important}
+.badge.position-absolute{background:var(--bad)!important;color:#fff!important;font-size:10px;padding:3px 5px}
+.btn{font-size:13px;font-weight:500;border-radius:8px;padding:7px 14px}.btn-sm{font-size:12px;padding:5px 10px}
+.btn-primary{--bs-btn-bg:#2563EB;--bs-btn-border-color:#2563EB;--bs-btn-hover-bg:#1D4ED8;--bs-btn-hover-border-color:#1D4ED8;--bs-btn-active-bg:#1E40AF;--bs-btn-disabled-bg:#93C5FD;--bs-btn-disabled-border-color:#93C5FD}
+.btn-danger{--bs-btn-bg:#DC2626;--bs-btn-border-color:#DC2626;--bs-btn-hover-bg:#B91C1C;--bs-btn-hover-border-color:#B91C1C}
+.btn-dark{--bs-btn-bg:#0F172A;--bs-btn-border-color:#0F172A;--bs-btn-hover-bg:#1E293B;--bs-btn-hover-border-color:#1E293B}
+.btn-outline-dark{--bs-btn-color:#334155;--bs-btn-border-color:#CBD5E1;--bs-btn-hover-bg:#F1F5F9;--bs-btn-hover-color:#0F172A;--bs-btn-hover-border-color:#CBD5E1;--bs-btn-active-bg:#E2E8F0;--bs-btn-active-color:#0F172A}
+.btn-link{color:var(--blue);text-decoration:none}
+.btn:focus-visible,.form-control:focus,.form-check-input:focus{box-shadow:0 0 0 3px rgba(37,99,235,.25);border-color:var(--blue);outline:0}
+.form-control{font-size:13px;height:38px;border-color:#CBD5E1;border-radius:8px;color:var(--navy)}.form-control::placeholder{color:#94A3B8}
+.form-control:disabled{background:var(--soft);color:#475569}label.small{font-weight:500;color:#334155;margin-bottom:4px;display:block}
+.form-check-input:checked{background-color:var(--blue);border-color:var(--blue)}
+.alert{border-radius:10px;font-size:13px;border-width:1px;padding:12px 16px}
+.alert-warning{background:#FFFBEB;border-color:#FDE68A;color:#92400E}.alert-success{background:#F0FDF4;border-color:#BBF7D0;color:#166534}
+.bars{display:flex;align-items:flex-end;gap:10px;height:180px;border-bottom:1px solid var(--line);padding-top:8px}
+.bars div{flex:1;background:#93B4F8;border-radius:4px 4px 0 0;position:relative;min-height:4px}
+.bars div:nth-last-child(-n+3){background:var(--blue)}.bars div.hot{background:var(--bad)!important}
+.bars small{position:absolute;bottom:-22px;left:0;right:0;text-align:center;font-size:11px;color:var(--mut)}
+.tl{border-left:2px solid var(--blue);padding-left:12px;margin-bottom:12px;font-size:13px}.tl.r{border-color:var(--bad)}.tl.y{border-color:var(--warn)}.tl:last-child{margin-bottom:0}
+.auth{max-width:420px;margin:8vh auto}.auth .logo{color:var(--navy)}
+.auth .card{padding:28px!important}.auth h5{font-size:18px;font-weight:600}
+.dropdown-menu{border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(15,23,42,.08);font-size:12px}
+.toast{border-radius:10px;border:1px solid var(--line)}
+@media(max-width:991px){.side{transform:translateX(-100%);transition:transform .2s}.side.open{transform:none}.main{margin-left:0}.main>.p-3{padding:20px 16px!important}.top{padding:8px 16px!important}h4.fw-bold{font-size:22px}}
+</style></head><body>
+<div id="root"></div>
+<div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="toast" class="toast"><div class="toast-body" id="tmsg"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),rp=n=>'Rp'+n.toLocaleString('id-ID');
+const hash=p=>{let h=5381;for(const c of 'nb|'+p)h=((h<<5)+h+c.charCodeAt(0))>>>0;return h.toString(16)};
+const DEF=()=>({price:89100,incident:false,helsaFinance:true,alert:'Aktif',exported:false,fixed:false,mutasi:false,
+logs:[{t:'09.00',u:'Callista',a:'Mutasi Helsa dari Finance ke Marketing dicatat',c:'info'},{t:'13.00',u:'Sistem',a:'Alert: Helsa (Marketing) masih memiliki role Finance Admin',c:'warn'},{t:'16.00',u:'Aswin',a:'Verifikasi hak akses karyawan dimulai',c:'info'}],
+notifs:['Alert keamanan: role tidak sesuai departemen']});
+let S=JSON.parse(localStorage.getItem('nb_s')||'null')||DEF(),cur='',menuOpen=false;
+const save=()=>localStorage.setItem('nb_s',JSON.stringify(S));
+const USERS0=[['callista','Callista','HRD','Staf HRD'],['giri','Giri','IT','IT Admin'],['aswin','Aswin','Finance','Head of Finance'],['helsa','Helsa','Marketing','Marketing']];
+function users(){let u=JSON.parse(localStorage.getItem('nb_u')||'null');if(!u){u=USERS0.map(x=>({id:x[0],name:x[1],email:x[0]+'@nusabelanja.test',pw:hash('123456'),dept:x[2],role:x[3]}));localStorage.setItem('nb_u',JSON.stringify(u))}return u}
+const sess=()=>{let id=localStorage.getItem('nb_sess')||sessionStorage.getItem('nb_sess');return users().find(u=>u.id==id)};
+function toast(m){$('#tmsg').textContent=m;bootstrap.Toast.getOrCreateInstance($('#toast'),{delay:2600}).show()}
+function log(t,u,a,c){S.logs.push({t,u,a,c});save()}
+function toggleMode(){S.fixed?setBefore():doFix(true)}
+const MENU={dash:['📊','Dashboard Penjualan'],users:['👥','Pengguna dan Role'],mutasi:['📝','Mutasi Karyawan'],audit:['🧾','Audit Log'],alert:['⚠️','Security Alert'],review:['✅','Access Review'],produk:['🏷️','Produk dan Harga'],trx:['🛒','Data Transaksi'],ekspor:['📤','Ekspor Data'],insiden:['🔥','Dampak Insiden'],perbaikan:['🛠️','Perbaikan Akses'],marketing:['📣','Marketing'],materi:['🎨','Materi Kampanye']};
+function menuFor(u){const m={callista:['dash','users','mutasi','review'],giri:['dash','users','audit','alert','review','perbaikan','insiden'],aswin:['dash','review','audit','produk','trx','insiden'],
+helsa:S.helsaFinance?['dash','produk','trx','ekspor','marketing','materi']:['marketing','materi']};return m[u.id]||['dash']}
+function authView(tab){const reg=tab=='reg';
+$('#root').innerHTML=`<div class="auth px-3"><div class="logo text-dark"><b>NB</b><div><div class="fw-bold">NUSA BELANJA</div><small class="text-muted">Commerce Management System</small></div></div>
+<div class="card p-4"><h5 class="mb-3">${reg?'Daftar akun':'Masuk'}</h5><div id="err" class="text-danger small mb-2"></div>
+${reg?'<input id="n" class="form-control mb-2" placeholder="Nama">':''}<input id="e" class="form-control mb-2" placeholder="Email"><input id="p" type="password" class="form-control mb-2" placeholder="Password (minimal 6 karakter)">
+${reg?'':'<div class="form-check mb-3"><input type="checkbox" id="rm" class="form-check-input"><label for="rm" class="form-check-label">Ingat saya</label></div>'}
+<button class="btn btn-primary w-100" onclick="${reg?'doReg()':'doLogin()'}">${reg?'Daftar':'Masuk'}</button>
+<button class="btn btn-link btn-sm mt-1" onclick="authView('${reg?'':'reg'}')">${reg?'Sudah punya akun? Masuk':'Belum punya akun? Daftar'}</button></div>
+${reg?'':`<div class="card p-3 mt-3"><div class="small text-muted mb-2">Login cepat untuk syuting</div><div class="row g-2">${users().slice(0,4).map(u=>`<div class="col-6"><button class="btn btn-outline-dark w-100 btn-sm" onclick="enter('${u.id}',true)">${u.name}<br><small>${u.role}</small></button></div>`).join('')}</div></div>`}</div>`}
+function valid(){const e=$('#e').value.trim(),p=$('#p').value;if(!/^\S+@\S+\.\S+$/.test(e)){$('#err').textContent='Email tidak valid.';return}if(p.length<6){$('#err').textContent='Password minimal 6 karakter.';return}return{e,p}}
+function doReg(){const v=valid();if(!v)return;const n=$('#n').value.trim();if(!n){$('#err').textContent='Nama wajib diisi.';return}const u=users();if(u.some(x=>x.email==v.e)){$('#err').textContent='Email sudah terdaftar.';return}
+u.push({id:'u'+Date.now(),name:n,email:v.e,pw:hash(v.p),dept:'Umum',role:'Staf'});localStorage.setItem('nb_u',JSON.stringify(u));authView();toast('Akun dibuat. Silakan masuk.')}
+function doLogin(){const v=valid();if(!v)return;const u=users().find(x=>x.email==v.e&&x.pw==hash(v.p));if(!u){$('#err').textContent='Email atau password salah.';return}enter(u.id,$('#rm').checked)}
+function enter(id,rm){localStorage.removeItem('nb_sess');sessionStorage.removeItem('nb_sess');(rm?localStorage:sessionStorage).setItem('nb_sess',id);const u=sess();cur=menuFor(u)[0];render()}
+function logout(){localStorage.removeItem('nb_sess');sessionStorage.removeItem('nb_sess');authView()}
+function go(p){cur=p;menuOpen=false;render()}
+function render(){const u=sess();if(!u)return authView();
+const m=menuFor(u);if(!m.includes(cur))cur=m[0];
+document.body.className=S.fixed?'after':'before';
+const roleTxt=u.id=='helsa'?(S.helsaFinance?'Marketing + Finance Admin':'Marketing'):u.role;
+$('#root').innerHTML=`<aside class="side ${menuOpen?'open':''}"><div class="logo"><b>NB</b><div><div class="fw-bold">NUSA BELANJA</div><small class="text-secondary">Commerce Management System</small></div></div>
+<div class="navlbl">Menu</div>${m.map(k=>`<button class="nv ${k==cur?'on':''}" onclick="go('${k}')"><span class="ic">${MENU[k][0]}</span>${MENU[k][1]}</button>`).join('')}
+<hr class="border-secondary"><div class="navlbl">Sistem</div><button class="nv" onclick="resetDemo()"><span class="ic">♻️</span>Reset demo</button><button class="nv" onclick="logout()"><span class="ic">🚪</span>Keluar</button></aside>
+<div class="main"><div class="top d-flex flex-wrap align-items-center gap-2 px-3 py-2"><button class="btn btn-dark btn-sm d-lg-none" onclick="menuOpen=!menuOpen;render()">☰</button>
+<span class="badge ${S.fixed?'bg-success':'bg-warning text-dark'}">${S.fixed?'Sesudah perbaikan':'Sebelum perbaikan'}</span>
+<button class="btn btn-outline-dark btn-sm" onclick="toggleMode()">Ganti mode</button>
+<div class="ms-auto d-flex align-items-center gap-3"><div class="dropdown"><button class="btn btn-light btn-sm position-relative" data-bs-toggle="dropdown">🔔<span class="badge bg-danger position-absolute top-0 start-100 translate-middle">${S.notifs.length}</span></button>
+<ul class="dropdown-menu dropdown-menu-end p-2" style="min-width:260px">${S.notifs.slice().reverse().map(n=>`<li class="small py-1 border-bottom">${n}</li>`).join('')||'<li class="small">Tidak ada notifikasi</li>'}</ul></div>
+<div class="text-end lh-sm"><b>${u.name}</b><br><small class="text-muted">${roleTxt}</small></div><span class="av">${u.name[0]}</span></div></div>
+<div class="p-3 p-lg-4">${S.fixed?`<div class="alert alert-success"><b>Akses pengguna sudah sesuai jabatan.</b> Login Bukan Berarti Boleh Lihat Semua.</div>`:''}${PAGES[cur](u)}</div></div>`}
+const T=(h,rows)=>`<div class="table-responsive"><table class="table table-sm align-middle"><thead><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+const H=(t,s)=>`<h4 class="fw-bold mb-1">${t}</h4><p class="text-muted">${s||''}</p>`;
+const bd=(t,c)=>`<span class="badge bg-${c}">${t}</span>`;
+const CAT=[['NB-BK-001','Biji Kopi Arabika Gayo 250 g','Biji kopi',78000],['NB-BK-002','Biji Kopi Robusta Temanggung 250 g','Biji kopi',54000],['NB-BK-003','Biji Kopi House Blend 500 g','Biji kopi',112000],['NB-PK-001','Paket Kopi Premium','Paket kopi',99000],['NB-PK-002','Paket Kopi Starter Seduh','Paket kopi',149000],['NB-AS-001','V60 Dripper Keramik 02','Alat seduh',85000],['NB-AS-002','French Press 350 ml','Alat seduh',120000],['NB-AS-003','Moka Pot 3 Cup','Alat seduh',135000],['NB-AS-004','Gilingan Kopi Manual','Alat seduh',210000],['NB-AS-005','Gooseneck Kettle 600 ml','Alat seduh',245000]];
+const PAGES={
+dash:()=>{const o=[18,22,30,41,37,45,52,48],lb=['08','10','12','14','16','18','20','21'];if(S.incident)o[6]=140,o[7]=172;const mx=Math.max(...o);
+return H('Dashboard Penjualan','Ringkasan hari ini')+`<div class="row g-3 mb-3">${[['Pesanan hari ini',S.incident?'1.240':'893'],['Nilai transaksi',S.incident?'Rp118 jt':'Rp142 jt'],['Rata-rata keranjang',S.incident?'Rp95 rb':'Rp159 rb'],['Status alert',S.alert]].map(x=>`<div class="col-6 col-lg-3"><div class="card p-3"><small class="text-muted">${x[0]}</small><div class="stat ${x[0]=='Status alert'&&S.alert=='Aktif'?'text-danger':''}">${x[1]}</div></div></div>`).join('')}</div>
+<div class="row g-3"><div class="col-lg-8"><div class="card p-3"><b class="mb-3">Pesanan per jam</b><div class="bars mb-4">${o.map((v,i)=>`<div class="${S.incident&&i>5?'hot':''}" style="height:${v/mx*100}%"><small>${lb[i]}</small></div>`).join('')}</div>${S.incident?'<div class="text-danger small">Lonjakan pesanan terdeteksi sejak 20.47.</div>':''}</div></div>
+<div class="col-lg-4"><div class="card p-3 mb-3"><b class="mb-2">Penjualan per kategori</b>${[['Biji kopi','38%'],['Paket kopi',S.incident?'41%':'27%'],['Alat seduh',S.incident?'21%':'35%']].map(x=>`<div class="d-flex justify-content-between small border-bottom py-1"><span>${x[0]}</span><b>${x[1]}</b></div>`).join('')}</div><div class="card p-3"><b class="mb-2">Linimasa</b>${[['09.00','Mutasi jabatan Helsa',''],['13.00','Security alert muncul','y'],['16.00','Verifikasi hak akses',''],['20.47','Perubahan harga produk','r'],['21.15','Ekspor data transaksi','r']].map(x=>`<div class="tl ${x[2]}"><b>${x[0]}</b> ${x[1]}</div>`).join('')}</div></div></div>`},
+users:()=>H('Pengguna dan Role','Daftar akun dan hak akses')+`<div class="card p-3">${T(['Nama','Departemen','Jabatan','Status','Hak akses'],[['Callista','HRD','Staf HRD',bd('Aktif','success'),'HR Admin'],['Giri','IT','IT Admin',bd('Aktif','success'),'System Admin'],['Aswin','Finance','Head of Finance',bd('Aktif','success'),'Finance Admin'],['Helsa','Marketing','Marketing',bd('Aktif','success'),S.helsaFinance?bd('Marketing','primary')+' '+bd('Finance Admin (tidak sesuai)','danger'):bd('Marketing','primary')]])}</div>`,
+mutasi:()=>H('Formulir Mutasi Karyawan','Perpindahan jabatan, 09.00')+`<div class="card p-3 col-lg-7"><div class="row g-2 mb-3"><div class="col-6"><label class="small">Nama</label><input class="form-control" value="Helsa Anindya" disabled></div><div class="col-6"><label class="small">Tanggal efektif</label><input class="form-control" value="09.00 hari ini" disabled></div>
+<div class="col-6"><label class="small">Dari</label><input class="form-control" value="Finance" disabled></div><div class="col-6"><label class="small">Ke</label><input class="form-control" value="Marketing" disabled></div></div>
+<div class="form-check mb-3"><input type="checkbox" id="rv" class="form-check-input" ${S.helsaFinance?'':'checked'} disabled><label for="rv" class="form-check-label">Ajukan perubahan akses (cabut Finance Admin)</label></div>
+<button class="btn btn-primary" onclick="S.mutasi=true;save();toast('Mutasi disimpan. Permintaan akses belum diajukan.')">Simpan mutasi</button></div>`,
+audit:()=>H('Audit Log','Aktivitas sistem')+`<div class="card p-3">${T(['Waktu','Pengguna','Aktivitas'],S.logs.slice().sort((a,b)=>a.t.localeCompare(b.t)).map(l=>[l.t,l.u,(l.c=='bad'?'<span class="text-danger fw-bold">':l.c=='warn'?'<span class="text-warning fw-bold">':'<span>')+l.a+'</span>']))}</div>`,
+alert:()=>H('Security Alert','Pemantauan akses, 13.00')+`<div class="alert alert-${S.alert=='Aktif'?'warning':'success'}"><b>${S.alert=='Aktif'?'Peringatan':'Selesai'}:</b> akun Helsa berada di departemen Marketing, tetapi role Finance Admin ${S.helsaFinance?'masih aktif':'sudah dicabut'}.</div><div class="card p-3">${T(['Akun','Departemen','Role','Status'],[['Helsa','Marketing',S.helsaFinance?'Finance Admin':'Marketing',bd(S.alert,S.alert=='Aktif'?'warning text-dark':'success')]])}</div>`,
+review:u=>H('Access Review','Verifikasi akses, 16.00')+`<div class="card p-3">${T(['Karyawan','Departemen','Role aktif','Sesuai?','Aksi'],[['Callista','HRD','HR Admin',bd('Sesuai','success'),''],['Giri','IT','System Admin',bd('Sesuai','success'),''],['Aswin','Finance','Finance Admin',bd('Sesuai','success'),''],['Helsa','Marketing',S.helsaFinance?'Finance Admin':'Marketing',S.helsaFinance?bd('Tidak sesuai','danger'):bd('Sesuai','success'),S.helsaFinance&&u.id=='giri'?'<button class="btn btn-sm btn-danger" onclick="doFix()">Cabut akses</button>':'']])}</div>`,
+produk:u=>{const can=u.id=='helsa'||u.id=='aswin';return H('Produk dan Harga','Pengaturan Harga')+`<div class="card p-3 mb-3">${T(['SKU','Produk','Kategori','Harga'],CAT.map(c=>[c[0],c[1],c[2],rp(c[3])]))}</div><div class="card p-3 col-lg-7"><div class="d-flex gap-3 mb-3"><div style="font-size:2.5rem">☕</div><div><b>Paket Kopi Premium</b><br><small class="text-muted">SKU NB-PK-001, Kategori Paket Kopi</small></div></div>
+<div class="row g-2 mb-3"><div class="col-6"><small class="text-muted">Harga normal</small><div class="fw-bold">${rp(99000)}</div></div><div class="col-6"><small class="text-muted">Harga promo seharusnya</small><div class="fw-bold">${rp(89100)}</div></div></div>
+<label class="small">Harga promo saat ini</label><input id="pr" type="number" class="form-control mb-2 ${S.price<89100?'is-invalid':''}" value="${S.price}">
+<button class="btn btn-primary" ${can?'':'disabled'} onclick="savePrice()">Simpan harga</button>${S.price<89100?'<div class="text-danger mt-2 small">Harga aktif jauh di bawah harga promo.</div>':''}</div>`},
+trx:()=>H('Data Transaksi','Data pelanggan fiktif')+`<div class="card p-3">${T(['Pelanggan','Telepon','Alamat','Riwayat belanja'],[['Rani Utami','0812-0000-0101','Jl. Melati 5, Surakarta','Paket Kopi Premium, V60 Dripper'],['Doni Saputra','0813-0000-0202','Jl. Kenanga 12, Sukoharjo','Biji Arabika Gayo 250 g, Gilingan Manual'],['Maya Lestari','0857-0000-0303','Jl. Anggrek 8, Karanganyar','French Press 350 ml, House Blend 500 g'],['Bagas Nugroho','0822-0000-0404','Jl. Dahlia 3, Klaten','Robusta Temanggung 250 g, Moka Pot'],['Sinta Kurnia','0878-0000-0505','Jl. Mawar 9, Boyolali','Paket Kopi Premium, Gooseneck Kettle'],['Fajar Hidayat','0821-0000-0606','Jl. Cempaka 4, Surakarta','Paket Starter Seduh']])}</div>`,
+ekspor:()=>H('Ekspor Data','Simulasi, tidak ada data atau email yang dikirim')+`<div class="card p-3 col-lg-7"><button class="btn btn-primary mb-3" onclick="doExport()">Ekspor data transaksi</button><div class="progress mb-3" style="height:12px"><div id="pb" class="progress-bar" style="width:${S.exported?100:0}%"></div></div><div id="em">${S.exported?emailBox():''}</div></div>`,
+insiden:()=>{const d=312*(89100-9900);return H('Simulasi Dampak Insiden','Perubahan harga 20.47')+`<div class="row g-3"><div class="col-md-4"><div class="card p-3"><small>Pesanan harga Rp9.900</small><div class="stat text-danger">312</div></div></div><div class="col-md-4"><div class="card p-3"><small>Selisih penjualan</small><div class="stat text-danger">${rp(d)}</div></div></div><div class="col-md-4"><div class="card p-3"><small>Status</small><div class="stat">${S.incident?'Berlangsung':S.fixed?'Dipulihkan':'Belum terjadi'}</div></div></div></div><p class="mt-3 text-muted small">Hitungan: 312 pesanan x (Rp89.100 - Rp9.900) = ${rp(d)}, sekitar Rp24,7 juta.</p>`},
+perbaikan:()=>H('Perbaikan Hak Akses','Tindakan IT')+`<div class="card p-3 col-lg-7">${[['Cabut akses Finance Helsa',!S.helsaFinance,'revoke()'],['Kembalikan harga promo ke Rp89.100',S.price==89100,'restore()'],['Tutup alert keamanan',S.alert!='Aktif','closeAlert()']].map(x=>`<div class="d-flex justify-content-between align-items-center border-bottom py-2"><span>${x[0]}</span>${x[1]?bd('Selesai','success'):`<button class="btn btn-sm btn-danger" onclick="${x[2]}">Jalankan</button>`}</div>`).join('')}<button class="btn btn-dark mt-3" onclick="doFix()">Jalankan semua perbaikan</button></div>`,
+marketing:u=>H('Marketing','Kampanye aktif')+`<div class="row g-3">${[['Promo Akhir Pekan','Aktif','Paket Kopi Premium'],['Bundling Alat Seduh','Draf','V60 Dripper dan Gilingan Manual'],['Flash Sale Malam','Dijadwalkan','Biji kopi pilihan']].map(x=>`<div class="col-md-4"><div class="card p-3"><b>${x[0]}</b><small class="text-muted">${x[2]}</small><div class="mt-2">${bd(x[1],'primary')}</div></div></div>`).join('')}</div>`,
+materi:()=>H('Materi Kampanye','Aset pemasaran')+`<div class="card p-3">${T(['Materi','Format','Status'],[['Banner Paket Kopi Premium','PNG',bd('Siap','success')],['Caption Instagram Biji Kopi','Teks',bd('Revisi','warning text-dark')],['Newsletter Alat Seduh','HTML',bd('Draf','secondary')]])}</div>`};
+function emailBox(){return `<div class="border rounded p-3 small bg-light"><b>Simulasi email (tidak terkirim)</b><br>Dari: helsa@nusabelanja.test<br>Kepada: <span class="text-danger fw-bold">tim.finanse@nusabelanja-mail.test</span> <span class="badge bg-danger">Penerima salah</span><br>Lampiran: transaksi_kopi_fiktif.csv<br>Waktu: 21.15</div>`}
+function savePrice(){const v=+$('#pr').value;S.price=v;if(v<89100){S.incident=true;S.notifs.push('Harga Paket Kopi Premium diubah ke '+rp(v));log('20.47','Helsa','Ubah harga Paket Kopi Premium menjadi '+rp(v),'bad')}save();toast('Harga disimpan.');render()}
+function doExport(){if(S.exported)return;let w=0;const t=setInterval(()=>{w+=10;if($('#pb'))$('#pb').style.width=w+'%';if(w>=100){clearInterval(t);S.exported=true;log('21.15','Helsa','Ekspor data transaksi, email ke penerima salah','bad');S.notifs.push('Data transaksi diekspor');save();if($('#em'))$('#em').innerHTML=emailBox()}},250)}
+function revoke(){S.helsaFinance=false;log('22.10','Giri','Akses Finance Admin Helsa dicabut','info');S.notifs.push('Akses Finance Helsa dicabut');save();render()}
+function restore(){S.price=89100;S.incident=false;log('22.12','Giri','Harga dikembalikan ke Rp89.100','info');S.notifs.push('Harga dipulihkan');save();render()}
+function closeAlert(){S.alert='Selesai';log('22.15','Giri','Security alert ditutup','info');save();render()}
+function doFix(q){S.helsaFinance=false;S.price=89100;S.alert='Selesai';S.fixed=true;if(!q)log('22.15','Giri','Perbaikan selesai: akses dan harga dipulihkan','info');save();if(!q)toast('Perbaikan selesai.');render()}
+function setBefore(){const l=S.logs;S=DEF();S.logs=l.filter(x=>['09.00','13.00','16.00'].includes(x.t)).slice(0,3);save();render()}
+function resetDemo(){S=DEF();save();toast('Demo dikembalikan ke kondisi awal.');render()}
+render();
+</script></body></html>
