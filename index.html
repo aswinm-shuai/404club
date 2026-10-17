@@ -82,7 +82,7 @@ const sess=()=>{let id=localStorage.getItem('nb_sess')||sessionStorage.getItem('
 function toast(m){$('#tmsg').textContent=m;bootstrap.Toast.getOrCreateInstance($('#toast'),{delay:2600}).show()}
 function log(t,u,a,c){S.logs.push({t,u,a,c});save()}
 function toggleMode(){S.fixed?setBefore():doFix(true)}
-const MENU={dash:['📊','Dashboard Penjualan'],users:['👥','Pengguna dan Role'],mutasi:['📝','Mutasi Karyawan'],audit:['🧾','Audit Log'],alert:['⚠️','Security Alert'],review:['✅','Access Review'],produk:['🏷️','Produk dan Harga'],trx:['🛒','Data Transaksi'],ekspor:['📤','Ekspor Data'],insiden:['🔥','Dampak Insiden'],perbaikan:['🛠️','Perbaikan Akses'],marketing:['📣','Marketing'],materi:['🎨','Materi Kampanye']};
+const MENU={dash:['📊','Dashboard Penjualan'],users:['👥','Pengguna dan Role'],mutasi:['📝','Mutasi Karyawan'],audit:['🧾','Audit Log'],alert:['⚠️','Security Alert'],review:['✅','Access Review'],produk:['🏷️','Produk dan Harga'],trx:['🛒','Data Transaksi'],ekspor:['📤','Ekspor Data'],insiden:['🔥','Total Kerugian'],perbaikan:['🛠️','Perbaikan Akses'],marketing:['📣','Marketing'],materi:['🎨','Materi Kampanye']};
 function menuFor(u){const m={callista:['dash','users','mutasi','review'],giri:['dash','users','audit','alert','review','perbaikan','insiden'],aswin:['dash','review','audit','produk','trx','insiden'],
 helsa:S.helsaFinance?['dash','produk','trx','ekspor','marketing','materi']:['marketing','materi']};return m[u.id]||['dash']}
 function authView(tab){const reg=tab=='reg';
